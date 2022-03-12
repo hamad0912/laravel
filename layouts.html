@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+
+    <title>Invo</title>
+
+    <!-- Scripts -->
+  
+    
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"rel="stylesheet"/>
+        <!-- Styles -->
+</head>
+<body>
+
+  
+  <div class="container-fluid">
+      <div class="col-lg-12">
+          <div class="row">
+              <div class="col-md-9">
+                  <div class="card">
+                      <div class="card-header text-white">
+                          <h4 style="float: right">الموردين </h4> 
+                          <a href="#" style="float: left" class="btn btn-success" 
+                          data-toggle="modal" data-target="#addsupplier">
+                          <i class="fa fa-plus"></i> اضافة مورد جديد </a> </div>
+                          <div class="card-body">
+                              <table class="table table-bordered table-left">
+                                  <thead>
+                                  <tr>
+                                      <th>#</th>
+                                      <th>اسم</th>
+                                      <th>رقم التواصل</th>
+                                      <th>الرابط</th>
+                                      <th>الايميل</th>
+                                      <th>نوع المنتجات</th>
+                                      <th>الاجراءات</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td>1</td>
+                                      <td style="color: #337ab7;">الاسم</td>
+                                      <td><a href="https://wa.me/{{ $supplier->phone}}" > <i class="fab fa-whatsapp fa-spin" style="font-size:20px;color:green"></i> رقم الججوال</a></td>
+                                      <td><a href="{{ $supplier->url}}">زيارة الموقع</a></td>
+                                      <td><a href="mailto:{{ $supplier->emmail}}"><i class='fa fa-envelope-square' style="font-size:20px;color:teal"></i> الايميل</a></td>
+                                      <td style="color: #337ab7;">الرابط</td>
+                                      <td>
+                                          <div class="btn-group">
+                                              <a href="#" class="btn btn-info btn-sm" data-toggle="modal"
+                                              data-target="#editsupplier{{ $supplier->id }}"><i class="fas fa-edit"></i> تعديل</a>
+                                                  <a href="#" data-toggle="modal"
+                                                  data-target="#deletesupplier{{ $supplier->id }}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i>حذف</a>
+  
+                                          </div>
+                                      </td>
+                                  </tr>
+                                 
+  
+                                   
+                              </tbody>
+                              </table>
+                              
+                          </div>
+                  </div>
+  
+              </div>
+              <div class="col-md-3">
+                  <div class="card">
+                      <div class="card-header"><h6 class="text-center"><i class="bi-bell"></i> التنبيهات</h6></div>
+                          <div class="card-body">
+                            
+                              
+                                                 
+                                        
+                                             
+                                              
+                          </div>
+                      
+                  </div>
+                </div>
+                  
+              </div>
+          </div>
+          
+      </div>
+  
+  </div>
+  
+      
+  
+      
+    
+      </body>
+      
+</html>
